@@ -315,6 +315,8 @@ function Upload({
       'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
         ['.docx'],
       'application/json': ['.json'],
+      'application/xml': ['.xml'],
+      'application/yaml': ['.yml'],
       'text/csv': ['.csv'],
       'text/html': ['.html'],
       'application/epub+zip': ['.epub'],

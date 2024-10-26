@@ -12,6 +12,8 @@ from application.parser.file.markdown_parser import MarkdownParser
 from application.parser.file.rst_parser import RstParser
 from application.parser.file.tabular_parser import PandasCSVParser,ExcelParser
 from application.parser.file.json_parser import JSONParser
+from application.parser.file.yaml_parser import YAMLParser
+from application.parser.file.xml_parser import XMLParser
 from application.parser.schema.base import Document
 
 DEFAULT_FILE_EXTRACTOR: Dict[str, BaseParser] = {
@@ -25,6 +27,9 @@ DEFAULT_FILE_EXTRACTOR: Dict[str, BaseParser] = {
     ".html": HTMLParser(),
     ".mdx": MarkdownParser(),
     ".json":JSONParser(),
+    ".yml" :YAMLParser(),
+    ".yaml":YAMLParser(),
+    ".xml":XMLParser(),
 }
 
 
