@@ -342,6 +342,7 @@ class UploadFile(Resource):
                         ".mdx",
                         ".json",
                         ".xlsx",
+                        ".pptx",
                     ],
                     job_name,
                     final_filename,
@@ -422,7 +423,10 @@ class TaskStatus(Resource):
             task_meta = task.info
         except Exception as err:
             return make_response(jsonify({"success": False, "error": str(err)}), 400)
-
+        print("Error here")
+        print(task_meta)
+        print(task.status)
+        print(task)
         return make_response(jsonify({"status": task.status, "result": task_meta}), 200)
 
 
